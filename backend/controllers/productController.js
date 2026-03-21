@@ -1,4 +1,4 @@
-﻿const { getProducts, getLastUpdated, isLiveLoaded } = require('../services/dataService');
+﻿const { getProducts, getLastUpdated, isLiveLoaded, getAutoAdded } = require('../services/dataService');
 
 const getProductsHandler = (req, res) => {
   const products = getProducts();
@@ -72,11 +72,13 @@ const getSuggestions = (req, res) => {
 const getStatus = (req, res) => {
   const products = getProducts();
   res.json({
-    totalProducts: products.length,
-    lastUpdated: getLastUpdated(),
-    liveData: isLiveLoaded(),
+    totalListings:   products.length,
+    uniqueProducts:  new Set(products.map(p => p.name.toLowerCase())).size,
+    autoAdded:       getAutoAdded(),
+    lastUpdated:     getLastUpdated(),
+    liveData:        isLiveLoaded(),
     nextPriceUpdate: "Every 2 hours",
-    nextApiRefresh: "Every 6 hours"
+    nextApiRefresh:  "Every 6 hours"
   });
 };
 

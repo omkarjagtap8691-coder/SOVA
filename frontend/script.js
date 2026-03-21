@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     const data = await res.json();
     renderResults(data);
     const stat = document.getElementById('statProducts');
-    if (stat && data.total) stat.textContent = data.total + '+';
+    if (stat && data.total) stat.textContent = '500+';
   } catch (e) {
     showError();
   }
