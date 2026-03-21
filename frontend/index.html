@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SOVA – Compare Prices Across India's Top Stores</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-tags"></i></div>
+        <span>SOVA</span>
+      </div>
+      <p class="tagline">Compare prices across Amazon, Flipkart, Myntra, Nykaa & more</p>
+
+      <!-- Search -->
+      <div class="search-wrapper">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="searchInput" placeholder="Search iPhone, Nike, Amul, boAt..." autocomplete="off"/>
+          <button onclick="searchProducts()">Search</button>
+        </div>
+        <div id="suggestions" class="suggestions-dropdown" style="display:none"></div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat-item"><div class="stat-num">10+</div><div class="stat-lbl">Platforms</div></div>
+      <div class="stat-item"><div class="stat-num" id="statProducts">200+</div><div class="stat-lbl">Products</div></div>
+      <div class="stat-item"><div class="stat-num">Live</div><div class="stat-lbl">Price Updates</div></div>
+      <div class="stat-item"><div class="stat-num">Free</div><div class="stat-lbl">Always</div></div>
+    </div>
+  </header>
+
+  <!-- Filters -->
+  <section class="filters-section" id="filtersSection" style="display:none">
+    <div class="filters-inner">
+      <div class="filter-group">
+        <label>Category</label>
+        <select id="categoryFilter" onchange="searchProducts()">
+          <option value="">All Categories</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Platform</label>
+        <select id="siteFilter" onchange="searchProducts()">
+          <option value="">All Platforms</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Sort By</label>
+        <select id="sortFilter" onchange="searchProducts()">
+          <option value="price_asc">Price: Low to High</option>
+          <option value="price_desc">Price: High to Low</option>
+          <option value="rating">Best Rated</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Max Price (₹)</label>
+        <input type="number" id="maxPrice" placeholder="e.g. 5000" onchange="searchProducts()"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Badges -->
+  <section class="platforms-section">
+    <div class="platforms-inner">
+      <span class="platform-badge amazon">🛒 Amazon</span>
+      <span class="platform-badge flipkart">📦 Flipkart</span>
+      <span class="platform-badge myntra">👗 Myntra</span>
+      <span class="platform-badge meesho">🛍️ Meesho</span>
+      <span class="platform-badge snapdeal">⚡ Snapdeal</span>
+      <span class="platform-badge ajio">✨ Ajio</span>
+      <span class="platform-badge tatacliq">💎 Tata Cliq</span>
+      <span class="platform-badge shopclues">🏷️ ShopClues</span>
+      <span class="platform-badge nykaa">💄 Nykaa</span>
+      <span class="platform-badge bigbasket">🥦 BigBasket</span>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <main class="results-section">
+    <div id="resultsInfo" class="results-info" style="display:none"></div>
+    <div id="liveBar" class="live-bar" style="display:none"></div>
+    <div id="results" class="results-grid"></div>
+    <div id="emptyState" class="empty-state">
+      <i class="fa-solid fa-magnifying-glass-dollar"></i>
+      <h2>Find the best price instantly</h2>
+      <p>Search any product and compare prices across 10 Indian shopping platforms</p>
+    </div>
+    <div id="loadingState" class="loading-state" style="display:none">
+      <div class="spinner"></div>
+      <p>Finding best prices...</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><span>SOVA</span> &copy; <span id="year"></span> &nbsp;·&nbsp; Smart price comparison across India's top stores &nbsp;·&nbsp; Prices are indicative</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
