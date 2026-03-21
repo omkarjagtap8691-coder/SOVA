@@ -1,4 +1,6 @@
-const API = window.location.port === '3000' ? '/api/products' : 'http://localhost:3000/api/products';
+const API = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+  ? `http://localhost:3000/api/products`
+  : '/api/products';
 
 window.addEventListener('DOMContentLoaded', async () => {
   // Load filters
@@ -298,6 +300,6 @@ function showError() {
     <div class="empty-state">
       <i class="fa-solid fa-triangle-exclamation"></i>
       <h2>Something went wrong</h2>
-      <p>Make sure the backend server is running on port 3000</p>
+      <p>Please refresh the page and try again</p>
     </div>`;
 }
