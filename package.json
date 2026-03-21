@@ -1,0 +1,10 @@
+{
+  "name": "sova",
+  "version": "1.0.0",
+  "description": "SOVA Price Comparison Website",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {}
+}
