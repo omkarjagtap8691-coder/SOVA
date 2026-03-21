@@ -1,5 +1,5 @@
 const API = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-  ? `http://localhost:3000/api/products`
+  ? 'http://localhost:3000/api/products'
   : '/api/products';
 
 window.addEventListener('DOMContentLoaded', async () => {
