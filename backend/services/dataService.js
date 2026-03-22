@@ -227,13 +227,13 @@ function fluctuatePrices() {
 function startScheduler() {
   fetchAllAPIs();
 
-  // Re-fetch from all APIs every 6 hours
-  cron.schedule('0 */6 * * *', fetchAllAPIs);
+  // Re-fetch from all APIs every 30 minutes
+  cron.schedule('*/30 * * * *', fetchAllAPIs);
 
   // Fluctuate prices every 5 minutes
   cron.schedule('*/5 * * * *', fluctuatePrices);
 
-  console.log("[SOVA] Scheduler started — API refresh: 6h | Price update: 2h");
+  console.log("[SOVA] Scheduler started — API refresh: 30min | Price update: 5min");
 }
 
 // ── Getters ──────────────────────────────────────────────────────
