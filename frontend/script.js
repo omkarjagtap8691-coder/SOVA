@@ -170,7 +170,7 @@ function renderResults({ total, products, lastUpdated, liveData }) {
     liveBar.innerHTML = `
       <span class="live-dot"></span>
       Prices updated live &nbsp;·&nbsp; Last updated: ${time}
-      &nbsp;·&nbsp; Auto-refresh every 2 hours`;
+      &nbsp;·&nbsp; Auto-refresh every 5 minutes`;
   }
 
   grid.innerHTML = products.map(p => buildCard(p)).join('');
