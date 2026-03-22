@@ -177,11 +177,12 @@ function renderResults({ total, products, lastUpdated, liveData }) {
   document.getElementById('filtersSection').style.display = 'block';
 }
 
-// Generate search URL for each platform
+// Generate affiliate buy URL for each platform
+const ASSOCIATE_TAG = 'sovapricecomp-21';
 function getBuyUrl(site, productName) {
   const q = encodeURIComponent(productName);
   const urls = {
-    'Amazon':    `https://www.amazon.in/s?k=${q}`,
+    'Amazon':    `https://www.amazon.in/s?k=${q}&tag=${ASSOCIATE_TAG}`,
     'Flipkart':  `https://www.flipkart.com/search?q=${q}`,
     'Myntra':    `https://www.myntra.com/${q}`,
     'Meesho':    `https://www.meesho.com/search?q=${q}`,
@@ -192,7 +193,7 @@ function getBuyUrl(site, productName) {
     'Nykaa':     `https://www.nykaa.com/search/result/?q=${q}`,
     'BigBasket': `https://www.bigbasket.com/ps/?q=${q}`,
   };
-  return urls[site] || `https://www.google.com/search?q=${q}+buy+online`;
+  return urls[site] || `https://www.amazon.in/s?k=${q}&tag=${ASSOCIATE_TAG}`;
 }
 
 
