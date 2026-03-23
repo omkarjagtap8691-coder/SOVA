@@ -233,7 +233,9 @@ const FALLBACK_IMAGES = {
   'Appliances':   'https://cdn-icons-png.flaticon.com/256/2553/2553642.png',
   'Sports':       'https://cdn-icons-png.flaticon.com/256/857/857401.png',
   'Toys':         'https://cdn-icons-png.flaticon.com/256/3082/3082048.png',
+  'Chocolates':   'https://cdn-icons-png.flaticon.com/256/938/938063.png',
   'Electronics':  'https://cdn-icons-png.flaticon.com/256/3659/3659899.png',
+  'Chocolates':   'https://cdn-icons-png.flaticon.com/256/2454/2454297.png',
 };
 
 function getImgSrc(p) {
