@@ -67,6 +67,14 @@ window.addEventListener('DOMContentLoaded', async () => {
   } catch (e) {
     showError();
   }
+
+  // Load visitor count
+  try {
+    const vRes  = await fetch('/api/visitors');
+    const vData = await vRes.json();
+    const el = document.getElementById('statVisitors');
+    if (el) el.textContent = vData.count.toLocaleString('en-IN');
+  } catch(e) {}
 });
 
 async function fetchSuggestions(query) {

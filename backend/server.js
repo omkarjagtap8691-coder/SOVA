@@ -8,9 +8,19 @@ const productRoutes      = require('./routes/productRoutes');
 
 const app = express();
 
+let visitorCount = 0;
+
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend')));
+
+// Count every unique page visit
+app.use((req, res, next) => {
+  if (req.path === '/' || req.path === '/index.html') visitorCount++;
+  next();
+});
+
+app.get('/api/visitors', (req, res) => res.json({ count: visitorCount }));
 
 app.use('/api/products', productRoutes);
 app.get('/api/image', imageProxy);
