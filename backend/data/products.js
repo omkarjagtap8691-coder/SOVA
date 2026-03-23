@@ -583,6 +583,25 @@ const products = [
   { id:912, name:"Cadbury Celebrations Gift Box", brand:"Cadbury",  category:"Chocolates", price:369, originalPrice:549, rating:4.6, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"Flipkart",  inStock:true },
   { id:913, name:"Cadbury Celebrations Gift Box", brand:"Cadbury",  category:"Chocolates", price:349, originalPrice:549, rating:4.5, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"BigBasket", inStock:true },
 
+  // ─── SMALL CADBURY (₹5 onwards) ──────────────────────────────
+  { id:914, name:"Cadbury Dairy Milk 5rs",        brand:"Cadbury", category:"Chocolates", price:5,  originalPrice:6,  rating:4.5, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"BigBasket", inStock:true },
+  { id:915, name:"Cadbury Dairy Milk 5rs",        brand:"Cadbury", category:"Chocolates", price:5,  originalPrice:6,  rating:4.4, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"Amazon",    inStock:true },
+  { id:916, name:"Cadbury Dairy Milk 5rs",        brand:"Cadbury", category:"Chocolates", price:5,  originalPrice:6,  rating:4.3, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"Flipkart",  inStock:true },
+  { id:917, name:"Cadbury Dairy Milk 10rs",       brand:"Cadbury", category:"Chocolates", price:10, originalPrice:12, rating:4.5, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"BigBasket", inStock:true },
+  { id:918, name:"Cadbury Dairy Milk 10rs",       brand:"Cadbury", category:"Chocolates", price:10, originalPrice:12, rating:4.4, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"Amazon",    inStock:true },
+  { id:919, name:"Cadbury Dairy Milk 10rs",       brand:"Cadbury", category:"Chocolates", price:10, originalPrice:12, rating:4.3, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"Flipkart",  inStock:true },
+  { id:920, name:"Cadbury Dairy Milk 20rs",       brand:"Cadbury", category:"Chocolates", price:20, originalPrice:25, rating:4.5, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"BigBasket", inStock:true },
+  { id:921, name:"Cadbury Dairy Milk 20rs",       brand:"Cadbury", category:"Chocolates", price:20, originalPrice:25, rating:4.4, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"Amazon",    inStock:true },
+  { id:922, name:"Cadbury Dairy Milk 20rs",       brand:"Cadbury", category:"Chocolates", price:20, originalPrice:25, rating:4.3, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"Flipkart",  inStock:true },
+  { id:923, name:"Cadbury Eclairs Toffee 10pcs",  brand:"Cadbury", category:"Chocolates", price:10, originalPrice:15, rating:4.4, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"BigBasket", inStock:true },
+  { id:924, name:"Cadbury Eclairs Toffee 10pcs",  brand:"Cadbury", category:"Chocolates", price:10, originalPrice:15, rating:4.3, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"Amazon",    inStock:true },
+  { id:925, name:"Cadbury Gems 22g",              brand:"Cadbury", category:"Chocolates", price:10, originalPrice:15, rating:4.5, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"BigBasket", inStock:true },
+  { id:926, name:"Cadbury Gems 22g",              brand:"Cadbury", category:"Chocolates", price:10, originalPrice:15, rating:4.4, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"Amazon",    inStock:true },
+  { id:927, name:"Cadbury 5 Star 22g",            brand:"Cadbury", category:"Chocolates", price:10, originalPrice:15, rating:4.4, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"BigBasket", inStock:true },
+  { id:928, name:"Cadbury 5 Star 22g",            brand:"Cadbury", category:"Chocolates", price:10, originalPrice:15, rating:4.3, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"Amazon",    inStock:true },
+  { id:929, name:"Cadbury Perk 13g",              brand:"Cadbury", category:"Chocolates", price:5,  originalPrice:7,  rating:4.3, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"BigBasket", inStock:true },
+  { id:930, name:"Cadbury Perk 13g",              brand:"Cadbury", category:"Chocolates", price:5,  originalPrice:7,  rating:4.2, image:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=200&h=200&fit=crop", site:"Amazon",    inStock:true },
+
 ];
 
 module.exports = products;
