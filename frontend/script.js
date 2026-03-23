@@ -179,8 +179,8 @@ function renderResults({ total, products, lastUpdated, liveData }) {
 
 // Real Amazon URLs for specific products (direct product pages)
 const AMAZON_DIRECT_URLS = {
-  'Apple iPhone 15': 'https://www.amazon.in/dp/B0CHX1W1XY?tag=sovapricecomp-21',
-  'iPhone 15': 'https://www.amazon.in/dp/B0CHX1W1XY?tag=sovapricecomp-21',
+  'iPhone 15 128GB':      'https://www.amazon.in/dp/B0CHX1W1XY?tag=sovapricecomp-21',
+  'iPhone 15 Pro 256GB':  'https://www.amazon.in/dp/B0CHX1W1XY?tag=sovapricecomp-21',
 };
 
 // Generate affiliate buy URL for each platform
