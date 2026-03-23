@@ -177,23 +177,36 @@ function renderResults({ total, products, lastUpdated, liveData }) {
   document.getElementById('filtersSection').style.display = 'block';
 }
 
+// Real Amazon URLs for specific products (direct product pages)
+const AMAZON_DIRECT_URLS = {
+  // Add real Amazon product URLs here as: 'Product Name': 'https://www.amazon.in/dp/ASIN?tag=sovapricecomp-21'
+  // Example: 'iPhone 15': 'https://www.amazon.in/dp/B0CHX1W1XY?tag=sovapricecomp-21',
+};
+
 // Generate affiliate buy URL for each platform
 const ASSOCIATE_TAG = 'sovapricecomp-21';
 function getBuyUrl(site, productName) {
   const q = encodeURIComponent(productName);
+
+  // Use direct Amazon URL if available
+  if (site === 'Amazon' && AMAZON_DIRECT_URLS[productName]) {
+    return AMAZON_DIRECT_URLS[productName];
+  }
+
   const urls = {
-    'Amazon':    `https://www.amazon.in/s?k=${q}&tag=${ASSOCIATE_TAG}`,
-    'Flipkart':  `https://www.flipkart.com/search?q=${q}`,
-    'Myntra':    `https://www.myntra.com/${q}`,
+    // Amazon: exact product name search with affiliate tag + field-keywords for precision
+    'Amazon':    `https://www.amazon.in/s?field-keywords=${q}&tag=${ASSOCIATE_TAG}`,
+    'Flipkart':  `https://www.flipkart.com/search?q=${q}&sort=relevance`,
+    'Myntra':    `https://www.myntra.com/search?rawQuery=${q}`,
     'Meesho':    `https://www.meesho.com/search?q=${q}`,
-    'Snapdeal':  `https://www.snapdeal.com/search?keyword=${q}`,
+    'Snapdeal':  `https://www.snapdeal.com/search?keyword=${q}&sort=rlvncy`,
     'Ajio':      `https://www.ajio.com/search/?text=${q}`,
     'Tata Cliq': `https://www.tatacliq.com/search/?searchCategory=all&text=${q}`,
     'ShopClues': `https://www.shopclues.com/search?q=${q}`,
-    'Nykaa':     `https://www.nykaa.com/search/result/?q=${q}`,
-    'BigBasket': `https://www.bigbasket.com/ps/?q=${q}`,
+    'Nykaa':     `https://www.nykaa.com/search/result/?q=${q}&root=search`,
+    'BigBasket': `https://www.bigbasket.com/ps/?q=${q}&nc=as`,
   };
-  return urls[site] || `https://www.amazon.in/s?k=${q}&tag=${ASSOCIATE_TAG}`;
+  return urls[site] || `https://www.amazon.in/s?field-keywords=${q}&tag=${ASSOCIATE_TAG}`;
 }
 
 
